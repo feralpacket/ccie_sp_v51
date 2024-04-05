@@ -6,5 +6,5 @@ Here we go.
 Updated the progress tracker and added the SP v5.1 exam topics.
 
 ### Learning Matrix
-Looks like most ( all? ) of the links are broken.  Surprise.  Will take a lot of work to update and fix.
+Looks like most of the links are broken.  Surprise.  Will take a lot of work to update and fix.
 
