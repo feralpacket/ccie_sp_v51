@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export4.dtd">
+<en-export export-date="20240406T173729Z" application="Evernote" version="10.82.2">
+  <note>
+    <title>STP Security Features - Class Notes</title>
+    <created>20140929T164917Z</created>
+    <updated>20141222T083600Z</updated>
+    <note-attributes>
+    </note-attributes>
+    <content>
+      <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd"><en-note style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<div><b>STP Security Features</b></div>
+<div><br/></div>
+<div><b>BPDU Guard</b></div>
+<div> - Checks for any incoming BPDUs</div>
+<div> - Will block any port that receives a BPDU</div>
+<div>     -> The port is err-disabled</div>
+<div> - Global configuration</div>
+<div>     -> Only affects ports configured for portfast</div>
+<div><br/></div>
+<div>SW1(config)# <span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">spanning-tree portfast bpduguard default</span></div>
+<div><br/></div>
+<div> - Interface configuration</div>
+<div>     -> Portfast not required</div>
+<div>     -> “no” command used to disable BPDU Guard on the interface if it is configured globally</div>
+<div><br/></div>
+<div>SW1(config)# <span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">int fa0/1</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"> spanning-tree bpduguard enable</span></div>
+<div><br/></div>
+<div><b>BPDU Filter</b></div>
+<div>  - Global configuration</div>
+<div>     -> Stops sending BPDUs out all interfaces configured for portfast</div>
+<div>     -> If BPDU is received</div>
+<div>          -> Disables portfast</div>
+<div>          -> Starts listening / learning procedure</div>
+<div><br/></div>
+<div>SW1(config)# <span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">spanning-tree portfast bpdufilter default</span></div>
+<div><br/></div>
+<div> - Interface configuration</div>
+<div>     -> Stops sending BPDUs on the interface</div>
+<div>     -> Ignores received BPDUs</div>
+<div><br/></div>
+<div>SW1(config)# <span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">int fa0/1</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"> spanning-tree bpdufilter enable</span></div>
+<div><br/></div>
+<div>If BPDU Guard and BPDU Filter are configured on the same interface</div>
+<div> - Stops sending BPDUs out the interface</div>
+<div> - The interface is err-disabled if a BPDU is received</div>
+<div><br/></div>
+<div><b>Root Guard</b></div>
+<div> - Interface configuration</div>
+<div>     -> Exams incoming BPDUs</div>
+<div>     -> If a superior BPDU is received, the port is err-disabled</div>
+<div>     -> Root inconsistant mode</div>
+<div>     -> Recommended for edge switches</div>
+<div>          -> Can be configured on the root switch</div>
+<div><br/></div>
+<div>SW1(config)# <span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">int fa0/1</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"> spanning-tree guard root</span></div>
+<div><br/></div>
+<div><b>Loop Guard</b></div>
+<div> - On a non-designated port (blocking)</div>
+<div>     -> If BPDUs are no longer received, the port is err-disabled</div>
+<div><br/></div>
+<div><b>Unidirectional Link Detection (UDLD)</b></div>
+<div> - Can be configured on any link between two ports</div>
+<div> - Has hello mechanism to check tx &amp; rx</div>
+<div>     -> Sent every 15 seconds</div>
+<div>     -> If 3 consecutive hellos are missed, an action is taken</div>
+<div>          -> udld mode normal</div>
+<div>               -> Syslog message</div>
+<div>               -> SNMP trap sent (if configured)</div>
+<div>          -> udld mode aggressive</div>
+<div>               -> Starts sending hellos every second for 8 seconds</div>
+<div>               -> If no hellos are received, the port is err-disabled</div>
+<div> - Global configuration</div>
+<div><br/></div>
+<div>SW1(config)# <span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">udld mode { aggressive | normal }</span></div>
+<div><br/></div>
+<div> - Interface configuration</div>
+<div><br/></div>
+<div>SW1(config)#  <span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">int fa0/1</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"> udld mode { aggressive | normal }</span></div>
+<div><br/></div>
+</en-note>      ]]>
+    </content>
+  </note>
+</en-export>

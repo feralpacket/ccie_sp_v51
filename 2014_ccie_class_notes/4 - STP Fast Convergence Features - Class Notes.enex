@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export4.dtd">
+<en-export export-date="20240406T173659Z" application="Evernote" version="10.82.2">
+  <note>
+    <title>STP Fast Convergence Features - Class Notes</title>
+    <created>20140929T164851Z</created>
+    <updated>20141222T075908Z</updated>
+    <note-attributes>
+    </note-attributes>
+    <content>
+      <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd"><en-note style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<div><b>STP Fast Convergence Features</b></div>
+<div><br/></div>
+<div><b>1.  Portfast</b></div>
+<div> - Bypasses the listening and learning states on edge ports</div>
+<div> - Used for end devices</div>
+<div> - Global configuration</div>
+<div>     -> Applied to all non-trunking ports</div>
+<div><br/></div>
+<div>SW1(config)#  <span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">spanning-tree portfast default</span></div>
+<div><br/></div>
+<div> - Interface configuration</div>
+<div><br/></div>
+<div>SW1(config)# <span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">int fa0/1</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"> spanning-tree portfast</span></div>
+<div><br/></div>
+<div> - On trunk port</div>
+<div>     -> Should be used on trunk ports connected to</div>
+<div>          -> Routers</div>
+<div>          -> Servers</div>
+<div><br/></div>
+<div>SW1(config)# <span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">int fa0/1</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"> spanning-tree portfast trunk</span></div>
+<div><br/></div>
+<div><b>2.  Uplinkfast</b></div>
+<div> - Bypasses listening and learning states</div>
+<div>     -> Enables blocked port immediately</div>
+<div> - Used for direct link failurees</div>
+<div> - Sends dummy packets for all connected end devices</div>
+<div>     -> Destined for STP multicast address</div>
+<div> - Max-update-rate</div>
+<div>     -> Default is 150 packets per second</div>
+<div> - Global configuration</div>
+<div><br/></div>
+<div>SW1(config)# <span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">spanning-tree uplinkfast [max-update-rate &lt;pps>]</span></div>
+<div><br/></div>
+<div><b>3.  Backbonefast</b></div>
+<div> - To avoid max-age-timer incase of indirect link failure</div>
+<div> - Sends Root Link Query (RLQ) out blocking port</div>
+<div>     -> Sent as soon as an inferior BPDU is received</div>
+<div> - When RLQ acknowledgement is received, listening / learning procedure starts</div>
+<div> - Global configuration</div>
+<div><br/></div>
+<div>SW1(config)# <span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">spanning-tree backbonefast</span></div>
+<div><br/></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">show spanning-tree sum</span></div>
+<div> - Will list all of the STP features that are enabled</div>
+<div><br/></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">show spanning-tree int &lt;int> detail</span></div>
+<div> - Detailed information</div>
+<div> - Lists the number of BPDUs that are sent and received</div>
+</en-note>      ]]>
+    </content>
+  </note>
+</en-export>
