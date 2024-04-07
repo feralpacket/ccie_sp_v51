@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export4.dtd">
+<en-export export-date="20240407T174708Z" application="Evernote" version="10.82.2">
+  <note>
+    <title>EIGRP as the PE - CE Protocol - Class Notes</title>
+    <created>20140929T170030Z</created>
+    <updated>20150114T093557Z</updated>
+    <note-attributes>
+      <source-url>file:///</source-url>
+    </note-attributes>
+    <content>
+      <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd"><en-note style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><b>EIGRP as the PE to CE Protocol</b> (2 Sept 2014)
+<div>Lab:  MPLS 1 - 3</div>
+<div><br/></div>
+<div>R1(config)# <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">router eigrp 1</span></div>
+<div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">address-family ipv4 vrf c1b1</span></div>
+<div>  <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">autonomous-system 10</span></div>
+<div>  <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">network 14.0.0.0</span></div>
+<div>  <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">redistribute bgp metric 1 1 1 1 1</span></div>
+<div><br/></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">sh mpls interface</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">sh mpls ldp nei</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">sh bgp vpnv4 unicast all</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh ip eigrp vrf int</span><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh ip eigrp vrf ABC nei</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh ip route vrf ABC eigrp</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">ping vrf ABC 172.9.195.15</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">ping vrf ABC 172.9.0.15</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">ping vrf ABC ipv6 2002:172:9::16</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">ping ipv6 2002:172:9::10</span><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><b>Verify redistribution:</b></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh ip route vrf ABC eigrp</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh bgp vrf ABC all</span></div>
+<div>     -> Are the EIGRP routes in the BGP table?<span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh ip route vrf ABC bgp</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh ip eigrp vrf ABC topology</span></div>
+<div>     -> Are the BGP routes in the EIGRP topology?<span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><br/></div>
+<div><br/></div>
+</en-note>      ]]>
+    </content>
+  </note>
+</en-export>
