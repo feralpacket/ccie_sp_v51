@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export4.dtd">
+<en-export export-date="20240407T165425Z" application="Evernote" version="10.82.2">
+  <note>
+    <title>IPv6 Data Plane Filtering - Class Notes</title>
+    <created>20140929T165550Z</created>
+    <updated>20141119T040152Z</updated>
+    <note-attributes>
+    </note-attributes>
+    <content>
+      <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd"><en-note style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><b>IPv6 Data Plane Filtering</b> (28 Aug 2014)
+<div>Lab:  IPv6 1 and 2</div><div> - Only extended ASLs are supported</div><div> - Only named ACLs are supported</div><div><br/></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 access-list &lt;name></span></div><div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">permit | deny &lt;protocol> &lt;source> &lt;destination> [log]</span></div><div><br/></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">int fa0/0</span></div><div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 traffic-filter &lt;name> in | out</span></div></en-note>      ]]>
+    </content>
+  </note>
+</en-export>

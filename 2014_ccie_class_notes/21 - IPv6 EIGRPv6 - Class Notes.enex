@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export4.dtd">
+<en-export export-date="20240407T164935Z" application="Evernote" version="10.82.2">
+  <note>
+    <title>IPv6 EIGRPv6 - Class Notes</title>
+    <created>20140929T165505Z</created>
+    <updated>20141119T040235Z</updated>
+    <note-attributes>
+    </note-attributes>
+    <content>
+      <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd"><en-note style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><b>IPv6 EIGRPv6</b> (28 Aug 2014)
+<div>Lab:  IPv6 1 and 2</div><div> - Multicast FF02::A</div><div><br/></div><div>R1(config)# <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">int s0/0</span></div><div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 eigrp 100</span></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">int lo0</span></div><div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 eigrp 100</span></div><div><br/></div><div>The EIGRP process is shutdown by default</div><div><br/></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 router eigrp 100</span></div><div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">no shutdown</span></div><div><br/></div><div>The router-id is still a 32-bit address</div><div> - If no IPv4 addresses are configured on the router, the router-id must be manually configured</div><div><br/></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 router eigrp 100</span></div><div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">router-id 1.1.1.1</span></div><div><br/></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">sh ipv6 eigrp neighbor</span></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">sh ipv6 eigrp topology</span></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">sh ipv6 eigrp interface</span></div><div><br/></div><div><b>Summarization</b></div><div><br/></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">int s0/0</span></div><div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 summary-address eigrp 100 &lt;address/nm></span></div><div><br/></div><div><b>Authentication</b></div><div><br/></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">int s0/0</span></div><div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 authentication mode eigrp 100 md5</span></div><div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 authentication key-chain eigrp 100 ABC</span></div><div><br/></div><div><b>Default Routing</b></div><div> - There is no dedicated default routing command</div><div>- Options</div><div>     -> Redistributing a static default router</div><div>     -> Using summarization with the ultimate summary ( :: )</div></en-note>      ]]>
+    </content>
+  </note>
+</en-export>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export4.dtd">
+<en-export export-date="20240407T164852Z" application="Evernote" version="10.82.2">
+  <note>
+    <title>IPv6 RIPng - Class Notes</title>
+    <created>20140929T165449Z</created>
+    <updated>20141119T040229Z</updated>
+    <note-attributes>
+    </note-attributes>
+    <content>
+      <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd"><en-note style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><b>IPv6 RIPng</b> (28 Aug 2014)
+<div>Lab:  IPv6 1 and 2</div><div> - RIP Next Generation</div><div> - RIPv2</div><div> - Classless</div><div> - Supports authentication</div><div> - Multicast FF02::9</div><div> - Timers are the same as RIPv2</div><div> - Network command is no longer present</div><div><br/></div><div>R1(config)# <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">int s0/0</span></div><div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 rip &lt;name or number> enable</span></div><div>     -> The name or number is locally significant</div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">int lo0</span></div><div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 rip CISCO enable</span></div><div><br/></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">sh ipv6 route</span></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">sh ipv6 rip CISCO</span></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">sh ipv6 protocol</span></div><div><br/></div><div><b>Summarization</b></div><div><br/></div><div>R1(config)# <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">int s0/0</span></div><div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 rip CISCO summary &lt;address/nm></span></div><div><br/></div><div><b>Default Routing</b></div><div><br/></div><div>R1(config)# <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">int s0/0</span></div><div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 rip CISCO default-information originate [only]</span></div><div><br/></div><div>only - injects a default route and suppresses everything else</div><div><br/></div><div><b>Filtering</b></div><div> - Only supports prefix-lists</div><div><br/></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 prefix-list &lt;name> permit | deny &lt;address/nm></span></div><div><br/></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">ipv6 router rip CISCO</span></div><div> <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">distribute-list prefix &lt;name> in | out &lt;interface></span></div><div><br/></div></en-note>      ]]>
+    </content>
+  </note>
+</en-export>
