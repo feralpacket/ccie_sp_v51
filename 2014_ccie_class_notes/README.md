@@ -9,3 +9,4 @@ Note-to-self:
  - Need to add pictures of hand drawn diagrams to:
    - DMVPN
    - L2VPN
+ - L2VPN Interworking, VPLS configuration needs to be added
