@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export4.dtd">
+<en-export export-date="20240409T040830Z" application="Evernote" version="10.82.2">
+  <note>
+    <title>Multicast on XR Routers - Class Notes</title>
+    <created>20140929T172510Z</created>
+    <updated>20150116T085600Z</updated>
+    <note-attributes>
+    </note-attributes>
+    <content>
+      <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd"><en-note style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><b>Multicast on XR Routers</b> (15 Sept 2014)
+<div><br/></div>
+<div>To active</div>
+<div><br/></div>
+<div>R1(config)# <span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">multicast-routing</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;"> address-family ipv4</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">  int lo0</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">   enable</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">  int g0/0/0/0</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">   enable</span></div>
+<div><br/></div>
+<div><b>PIM Configuration</b></div>
+<div> - The only mode supported is sparse mode</div>
+<div><br/></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">router pim</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;"> address-family ipv4</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">  int lo0</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">   enable</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">  int g0/0/0/0</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">   enable</span></div>
+<div><br/></div>
+<div><b>IGMP Configuration</b></div>
+<div><br/></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">router igmp</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;"> int lo0</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">  join-group 255.1.1.1</span></div>
+<div><br/></div>
+<div><b>MSDP Configuration</b></div>
+<div><br/></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">router msdp</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;"> peer &lt;ip add></span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;"> connect-source &lt;ip add></span></div>
+<div><br/></div>
+<div><b>RP Configuration</b></div>
+<div> 1. Manual</div>
+<div><br/></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">router pim</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;"> address-family ipv4</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">  rp-address &lt;ip add></span></div>
+<div><br/></div>
+<div> 2. Auto-RP</div>
+<div><br/></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">router pim</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;"> address-family ipv4</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">  auto-rp { candidate-rp | candidate-bsr } &lt;ip add></span></div>
+<div><br/></div>
+<div> 3. BSR</div>
+<div><br/></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">router pim</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;"> address-family ipv4</span></div>
+<div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">  bsr { candidate-rp | candidate-bsr } &lt;ip add></span></div>
+<div><br/></div>
+<div>During the lab, manual configuration or BSR will be asked 90% of the time.</div>
+<div><br/></div>
+<div><br/></div>
+<div><b>Verification:</b></div>
+<div><br/></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh pim rp mapping</span></div>
+<div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh pim vrf ABC rp mapping</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh route ipv4 multicast</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh route vrf ABC ipv4 multicast</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh mfib route</span></div>
+</div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh mfib vrf ABC route</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh mfib vrf ABC route 239.255.172.11</span><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh pim int</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh pim nei</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh pim vrf ABC int</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh pim vrf ABC nei</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;"><br/></span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh igmp int</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh igmp groups</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh igmp vrf ABC int</span></div>
+<div><span style="background-color: rgb(255, 250, 165);-evernote-highlight:true;">sh igmp vrf ABC groups</span></div>
+<div><br/></div>
+<div><br/></div>
+</en-note>      ]]>
+    </content>
+  </note>
+</en-export>

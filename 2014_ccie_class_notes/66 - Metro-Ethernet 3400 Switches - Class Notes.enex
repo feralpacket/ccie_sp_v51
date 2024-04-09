@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE en-export SYSTEM "http://xml.evernote.com/pub/evernote-export4.dtd">
+<en-export export-date="20240409T042939Z" application="Evernote" version="10.82.2">
+  <note>
+    <title>Metro-Ethernet 3400 Switches - Class Notes</title>
+    <created>20140929T172727Z</created>
+    <updated>20141119T040444Z</updated>
+    <note-attributes>
+    </note-attributes>
+    <content>
+      <![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd"><en-note style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;"><b>ME 3400 Switches</b> (19 Sept 2014)
+<div>- Metro Ethernet</div><div> - All ports are shutdown by default</div><div>     -> Except uplink ports</div><div> - Ports</div><div>     -> Downstream</div><div>          -> Going towards the client</div><div>          -> User Network Interface (UNI)</div><div>     -> Upstream</div><div>          -> Going towards  SP core</div><div>          -> Network Node Interface (NNI)</div><div>     -> Downstream ports are isolated by default</div><div>          -> Can't communicate with each other</div><div>     -> Downstream ports can communicate with upstream ports by default</div><div><br/></div><div>UNI &lt;--> NNI</div><div>UNI &lt;-/-> UNI</div><div><br/></div><div>On UNI ports, processing of these protocols is disabled</div><div> - STP</div><div> - CDP</div><div> - LLDP</div><div><br/></div><div>If a client wants STP / CDP / LLDP / etherchannel to be activated on downstream ports, the ports must be changed</div><div> - Enhanced Network Interface (ENI)</div><div><br/></div><div>No DTP</div><div> - Trunk and access are the only options</div><div><br/></div><div>Only dot1q is supported</div><div><br/></div><div>No VTP support</div><div><br/></div><div>Default interface configuration is "static access"</div><div><br/></div><div>To change the port type</div><div><br/></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">int fa0/1</span></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;"> port-type { uni | eni | nni }</span></div><div><br/></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">sh port-type</span></div><div><br/></div><div>All VLANs on UNI ports are "uni-isolated" type</div><div> - To enable communication between UNI ports, change the VLAN type to "uni-community"</div><div><br/></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;">int range fa0/1 - 5</span></div><div><span style="background-color:rgb(255, 250, 165);-evernote-highlight:true;"> uni-vlan community</span></div></en-note>      ]]>
+    </content>
+  </note>
+</en-export>
