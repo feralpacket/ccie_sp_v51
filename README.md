@@ -17,6 +17,6 @@ Uploaded the Evernote .enex exports of the notes from a CCIE class I took in 201
 ### BGP
 Reduce some BGP timers to speed up convergence.  So I can see changes to the route table and BGP table faster.  Note:  **ONLY DO THIS IS A LAB ENVIRONMENT!**  Can also potenially cause route flaps or routing loops in complex lab environments.  Which would actually be cool to see.
 ```
-bgp scan-time 5
-neighbor 192.0.2.1 advertisement-interval 5
+bgp scan-time 10
+neighbor 192.0.2.1 advertisement-interval 10
 ```
