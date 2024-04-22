@@ -13,7 +13,7 @@ Uploaded the Evernote .enex exports of the notes from a CCIE class I took in 201
 
 ## SecureCRT Keyword Highlighting
 Created a new .ini for IOS XR.  Warning, it's a work in progress.  **feralpacket_iosxr_2024.ini** can be found here:  [SecureCRT Keywork Highlighting](https://github.com/feralpacket/securecrt-keyword-highlighting/)
-
+![feralpacket_iosxr_2024.ini](securecrt_feralpacket_iosxr.png)
 
 ## Always Be Labbing
 
