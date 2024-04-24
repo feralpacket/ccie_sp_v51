@@ -4,7 +4,9 @@ CLNP:  Connectionless Network Protocol
 CLNS:  Connectionless Network Service
 CONS:  Connection Network Service
 ES-IS:  End System-to-Intermediate System
+ESH:  End System Hello
 IS-IS:  Intermediate System - Intermediate System
+ISH:  Intermediate System Hello
 ISO:  International Organization for Standardization
 ITU:  International Telecommunication Union
 MPLS:  Multiprotocol Label Switching
