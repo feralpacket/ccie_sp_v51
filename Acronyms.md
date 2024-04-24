@@ -1,4 +1,4 @@
-# Acronym
+# Acronyms
 
 CLNS:  Connectionless Network Service
 CONS:  Connection Network Service
