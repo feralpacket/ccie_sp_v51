@@ -1,0 +1,13 @@
+CCIE Service Provider (v5.1) Equipment and Software List
+
+https://learningnetwork.cisco.com/s/article/ccie-service-provider-v5-0-equipment-and-software-list
+
+Virtual Machines
+ - Cisco CSR 1000v Series Cloud Services Routers (CSR) Release 16.9.x
+ - Cisco IOS XRV 9000 7.x
+ - Network Service Orchestrator (NSO) Release 6.x
+ - Cisco Catalyst 8000V Edge Release 17.x
+ - Cisco IOS XRd Release 7.x
+ 
+Supporting Virtual Machines
+ - Linux Ubuntu: 18.04 LTS
