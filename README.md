@@ -11,6 +11,9 @@ Looks like most of the links are broken.  Surprise.  Will take a lot of work to 
 ## 2014 CCIE Class Notes
 Uploaded the Evernote .enex exports of the notes from a CCIE class I took in 2014.
 
+## BGP Best Path Algorithm
+So I don't have to maintain 2 copies of the same notes:  [BGP Best Path Algorithm](https://github.com/feralpacket/network_commands/blob/main/bgp_best_path_algorithm)
+
 ## SecureCRT Keyword Highlighting
 Created a new .ini for IOS XR.  Warning, it's a work in progress.  **feralpacket_iosxr_2024.ini** can be found here:  [SecureCRT Keyword Highlighting](https://github.com/feralpacket/securecrt-keyword-highlighting/)
 
