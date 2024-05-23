@@ -2,6 +2,11 @@
 
 Here we go.
 
+## Cisco SP v5.1 Practice Lab
+Created an EVE-NG lab to replicate the SP v5.1 practice lab found here:
+
+https://learningnetwork.cisco.com/s/article/ccie-service-provider-practice-labs
+
 ## Progress Tracker
 Updated the progress tracker and added the SP v5.1 exam topics.
 
