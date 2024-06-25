@@ -23,6 +23,10 @@ So I don't have to maintain 2 copies of the same notes:  [BGP Best Path Algorith
 So I don't have to maintain 2 copies of the same notes:  [Protocol Priorities](https://github.com/feralpacket/network_commands/blob/main/protocol_priorites)
 
 ## SecureCRT Keyword Highlighting
+Never mind.  Adding everything into the normal 2024 config file.
+
+(https://github.com/feralpacket/securecrt-keyword-highlighting/blob/main/feralpacket2024-new.ini0
+
 Created a new .ini for IOS XR.  Warning, it's a work in progress.  **feralpacket_iosxr_2024.ini** can be found here:  [SecureCRT Keyword Highlighting](https://github.com/feralpacket/securecrt-keyword-highlighting/)
 
 ![feralpacket_iosxr_2024.ini](securecrt_feralpacket_iosxr.png)
