@@ -25,7 +25,7 @@ So I don't have to maintain 2 copies of the same notes:  [Protocol Priorities](h
 ## SecureCRT Keyword Highlighting
 Never mind.  Adding everything into the normal 2024 config file.
 
-(https://github.com/feralpacket/securecrt-keyword-highlighting/blob/main/feralpacket2024-new.ini0
+(https://github.com/feralpacket/securecrt-keyword-highlighting/blob/main/feralpacket2024-new.ini)
 
 Created a new .ini for IOS XR.  Warning, it's a work in progress.  **feralpacket_iosxr_2024.ini** can be found here:  [SecureCRT Keyword Highlighting](https://github.com/feralpacket/securecrt-keyword-highlighting/)
 
